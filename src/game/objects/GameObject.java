@@ -3,6 +3,11 @@ package game.objects;
 public class GameObject {
     private int id;
     private String name;
+    private int[][] comparison = {
+            {0, -1, 1},
+            {1, 0, -1},
+            {-1, 1, 0}
+    };
 
     protected int getId() {
         return id;
