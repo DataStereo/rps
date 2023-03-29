@@ -10,5 +10,6 @@ public class Game {
 
     public void run(){
         System.out.println("Game running!!");
+        System.out.println(new Rock());
     }
 }
