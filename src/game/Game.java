@@ -15,8 +15,11 @@ public class Game {
 
         Random random = new Random();
 
-        GameObject obj = objects[random.nextInt(objects.length)];
+        GameObject obj1 = objects[random.nextInt(objects.length)];
+        GameObject obj2 = objects[random.nextInt(objects.length)];
 
-        System.out.println(obj);
+        System.out.println(obj1);
+        System.out.println(obj2);
+        System.out.println(obj1.compareTo(obj2));
     }
 }
