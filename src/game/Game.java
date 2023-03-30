@@ -14,9 +14,10 @@ public class Game {
     public void run(){
         String[] status = {"lose", "draw", "win"};
 
-
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
+
+        int wins = 0;
 
         for (int i=0; i<3; i++){
             GameObject obj1 = objects[random.nextInt(objects.length)];
@@ -32,9 +33,21 @@ public class Game {
 
             System.out.println("You choose " + obj2);
             System.out.println("Computer chose " + obj1);
-            System.out.println(status[obj2.compareTo(obj1) + 1]);
+
+            int compatison = obj2.compareTo(obj1);
+            System.out.println(status[compatison + 1]);
+
+            wins += compatison;
             System.out.println("\n");
         }
         scanner.close();
+        System.out.println();
+        if (wins > 0){
+            System.out.println("You have won!");
+        } else if (wins < 0) {
+            System.out.println("You have lost!");
+        } else {
+            System.out.println("It's a draw!");
+        }
     }
 }
